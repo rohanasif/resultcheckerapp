@@ -11,15 +11,7 @@ import {
 const initialState = {
   admin: { password: "123" },
   students: [],
-  subjects: [
-    "MATHS",
-    "PHYSICS",
-    "CHEMISTRY",
-    "URDU",
-    "ENGLISH",
-    "ISLAMIAT",
-    "PAK STUDIES",
-  ],
+  subjects: [],
   message: { text: "" },
 };
 

@@ -6,9 +6,11 @@ import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
   let message = useSelector((state) => state.message.text);
+
   const dispatch = useDispatch();
   const [inp, setInp] = useState("");
   const [hidden, setHidden] = useState(true);
+  const [interacted, setInteracted] = useState(false);
   const navigate = useNavigate();
   const handleAdminLogin = (e) => {
     e.preventDefault();
@@ -27,10 +29,15 @@ const AdminLogin = () => {
             type="password"
             placeholder="Enter password"
             value={inp}
-            onChange={(e) => setInp(e.target.value)}
+            onChange={(e) => {
+              setInteracted(true);
+              setInp(e.target.value);
+            }}
           />
         </Form.Group>
-        {message ? <p className="text-danger">{message}</p> : null}
+        {message && interacted ? (
+          <p className="text-danger">{message}</p>
+        ) : null}
         <Button variant="primary" type="submit" hidden={hidden}>
           Submit
         </Button>
