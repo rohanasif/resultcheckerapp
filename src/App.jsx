@@ -3,7 +3,7 @@ import Home from "./routes/Home";
 import DisplayResult from "./routes/DisplayResult";
 import SubmitResult from "./routes/SubmitResult";
 import Login from "./routes/Login";
-import CreateResult from "./routes/CreateResult";
+import AddStudent from "./routes/AddStudent";
 import AdminLogin from "./routes/AdminLogin";
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/student/:rollno" element={<DisplayResult />} />
         <Route path="/submit" element={<SubmitResult />} />
-        <Route path="/admin" element={<CreateResult />} />
+        <Route path="/admin" element={<AddStudent />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
       </Routes>
     </div>

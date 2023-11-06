@@ -1,6 +1,6 @@
 import {
   ADMIN_LOGIN,
-  CREATE_STUDENT,
+  ADD_STUDENT,
   CREATE_RESULT,
   UPDATE_RESULT,
   SUBMIT_RESULT,
@@ -28,7 +28,7 @@ const rootReducer = (state = initialState, action) => {
         loggedIn: true,
       };
 
-    case CREATE_STUDENT:
+    case ADD_STUDENT:
       return {
         ...state,
         students: [...state.students, action.payload],

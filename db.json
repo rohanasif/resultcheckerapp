@@ -1,5 +1,13 @@
 {
-  "admin": { "password": "123" },
-  "students": [],
+  "admin": {
+    "password": "123"
+  },
+  "students": [
+    {
+      "name": "111",
+      "rollNo": "111",
+      "id": 1
+    }
+  ],
   "subjects": []
 }

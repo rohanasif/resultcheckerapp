@@ -1,10 +1,11 @@
 import axios from "axios";
 import {
-  ADMIN_LOGIN,
-  ADMIN_URL,
   STUDENTS_URL,
   SUBJECTS_URL,
+  ADMIN_LOGIN,
+  ADMIN_URL,
   UPDATE_MESSAGE,
+  ADD_STUDENT,
 } from "../constants";
 
 export const adminLogin = (input, setHidden) => async (dispatch) => {
@@ -24,7 +25,11 @@ export const adminLogin = (input, setHidden) => async (dispatch) => {
   }
 };
 
-export const createStudent = () => async (dispatch) => {};
+export const addStudent = (student) => async (dispatch) => {
+  const response = await axios.post(STUDENTS_URL, student);
+  const addedStudent = response.data;
+  dispatch({ type: ADD_STUDENT, payload: addedStudent });
+};
 
 export const createResult = () => async (dispatch) => {};
 
