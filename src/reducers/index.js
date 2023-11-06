@@ -6,7 +6,8 @@ import {
   SUBMIT_RESULT,
   LOGIN,
   GET_RESULT,
-} from "../constant";
+  UPDATE_MESSAGE,
+} from "../constants";
 const initialState = {
   admin: { password: "123" },
   students: [],
@@ -19,13 +20,20 @@ const initialState = {
     "ISLAMIAT",
     "PAK STUDIES",
   ],
+  message: { text: "" },
 };
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
+    case UPDATE_MESSAGE:
+      return {
+        ...state,
+        message: { ...state.message, text: action.payload },
+      };
     case ADMIN_LOGIN:
       return {
         ...state,
+        loggedIn: true,
       };
 
     case CREATE_STUDENT:

@@ -8,12 +8,12 @@ const Home = () => {
       <div className="d-flex justify-content-around">
         <Button
           onClick={() => {
-            navigate("/admin");
+            navigate("/adminlogin");
           }}
         >
           Admin Panel
         </Button>
-        <Button onClick={() => navigate("/student/:id")}>Result Check</Button>
+        <Button onClick={() => navigate("/login")}>Check Result</Button>
       </div>
     </div>
   );

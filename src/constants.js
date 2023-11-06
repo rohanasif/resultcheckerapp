@@ -1,3 +1,8 @@
+export const ADMIN_URL = "http://localhost:3000/admin";
+export const STUDENTS_URL = "http://localhost:3000/students";
+export const SUBJECTS_URL = "http://localhost:3000/subjects";
+export const UPDATE_MESSAGE = "UPDATE_MESSAGE";
+
 // ADMIN
 export const ADMIN_LOGIN = "ADMIN_LOGIN";
 export const CREATE_STUDENT = "CREATE_STUDENT";

@@ -1,5 +1,6 @@
 {
   "admin": { "password": "123" },
   "students": [],
-  "message": ""
+  "subjects": [],
+  "message": { "text": "" }
 }
