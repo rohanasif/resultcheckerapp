@@ -20,7 +20,7 @@ const AdminLogin = () => {
 
   return (
     <div>
-      <Form>
+      <Form onSubmit={(e) => handleAdminLogin(e)}>
         <Form.Group className="mb-3" controlId="password">
           <Form.Label>Enter Admin password</Form.Label>
           <Form.Control
@@ -31,11 +31,7 @@ const AdminLogin = () => {
           />
         </Form.Group>
         {message ? <p className="text-danger">{message}</p> : null}
-        <Button
-          variant="primary"
-          onClick={(e) => handleAdminLogin(e)}
-          hidden={hidden}
-        >
+        <Button variant="primary" type="submit" hidden={hidden}>
           Submit
         </Button>
       </Form>
