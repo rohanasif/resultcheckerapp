@@ -15,7 +15,7 @@ const AddStudent = () => {
         onSubmit={(e) => {
           e.preventDefault();
           dispatch(addStudent({ name, rollNo }));
-          navigate("/submit");
+          navigate(`/submit/${rollNo}`);
         }}
       >
         <Form.Group>

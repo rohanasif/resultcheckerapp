@@ -1,17 +1,13 @@
 import {
   ADMIN_LOGIN,
   ADD_STUDENT,
-  CREATE_RESULT,
-  UPDATE_RESULT,
   SUBMIT_RESULT,
   LOGIN,
-  GET_RESULT,
   UPDATE_MESSAGE,
 } from "../constants";
 const initialState = {
   admin: { password: "123" },
   students: [],
-  subjects: [],
   message: { text: "" },
 };
 
@@ -34,30 +30,6 @@ const rootReducer = (state = initialState, action) => {
         students: [...state.students, action.payload],
       };
 
-    case CREATE_RESULT:
-      return {
-        ...state,
-        students: [
-          state.students.map((student) =>
-            student.rollNo === action.payload.rollNo
-              ? { ...student, subjects: state.subjects }
-              : student
-          ),
-        ],
-      };
-
-    case UPDATE_RESULT:
-      return {
-        ...state,
-        students: [
-          state.students.map((student) =>
-            student.rollNo === action.payload.rollNo
-              ? { ...student, subjects: action.payload.subjects }
-              : student
-          ),
-        ],
-      };
-
     case SUBMIT_RESULT:
       return {
         ...state,
@@ -65,19 +37,13 @@ const rootReducer = (state = initialState, action) => {
           student.rollNo === action.payload.rollNo
             ? {
                 ...student,
-                subjects: state.subjects.map((subject) => ({
-                  ...subject,
-                  [action.payload.subject]: action.payload.marks,
-                })),
+                subjects: action.payload.subjects,
               }
             : student
         ),
       };
 
     case LOGIN:
-      return {};
-
-    case GET_RESULT:
       return {};
 
     default:

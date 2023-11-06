@@ -5,7 +5,7 @@ import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
-  let message = useSelector((state) => state.message.text);
+  let message = useSelector((state) => state.message);
 
   const dispatch = useDispatch();
   const [inp, setInp] = useState("");

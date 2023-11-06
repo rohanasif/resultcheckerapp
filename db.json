@@ -4,10 +4,18 @@
   },
   "students": [
     {
-      "name": "111",
-      "rollNo": "111",
-      "id": 1
+      "name": "er",
+      "rollNo": "1",
+      "id": 1,
+      "marks": {
+        "English": "1",
+        "Mathematics": "1",
+        "Urdu": "1",
+        "Physics": "1",
+        "Chemistry": "1",
+        "Islamiat": "1",
+        "Pak Studies": "1"
+      }
     }
-  ],
-  "subjects": []
+  ]
 }
