@@ -16,6 +16,20 @@
         "Islamiat": "1",
         "Pak Studies": "1"
       }
+    },
+    {
+      "name": "Rohan",
+      "rollNo": "1234",
+      "id": 2,
+      "marks": {
+        "English": "1",
+        "Mathematics": "1",
+        "Urdu": "1",
+        "Physics": "1",
+        "Chemistry": "1",
+        "Islamiat": "1",
+        "Pak Studies": "1"
+      }
     }
   ]
 }

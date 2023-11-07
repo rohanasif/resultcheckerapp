@@ -6,7 +6,6 @@ import {
   UPDATE_MESSAGE,
   ADD_STUDENT,
   SUBMIT_RESULT,
-  LOGIN,
 } from "../constants";
 
 export const adminLogin = (input, setHidden) => async (dispatch) => {
@@ -79,15 +78,6 @@ export const submitResult = (rollNo, marks) => async (dispatch) => {
     });
     const updatedStudent = studentResponse.data;
     dispatch({ type: SUBMIT_RESULT, payload: updatedStudent });
-  } catch (e) {
-    console.error(e);
-  }
-};
-
-export const login = (rollNo) => async (dispatch) => {
-  try {
-    const student = await dispatch(selectStudent(rollNo));
-    dispatch({ type: LOGIN, payload: student });
   } catch (e) {
     console.error(e);
   }

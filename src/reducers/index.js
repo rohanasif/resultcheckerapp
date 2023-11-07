@@ -2,7 +2,6 @@ import {
   ADMIN_LOGIN,
   ADD_STUDENT,
   SUBMIT_RESULT,
-  LOGIN,
   UPDATE_MESSAGE,
 } from "../constants";
 const initialState = {
@@ -42,9 +41,6 @@ const rootReducer = (state = initialState, action) => {
             : student
         ),
       };
-
-    case LOGIN:
-      return {};
 
     default:
       return state;

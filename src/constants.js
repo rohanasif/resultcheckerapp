@@ -6,6 +6,3 @@ export const UPDATE_MESSAGE = "UPDATE_MESSAGE";
 export const ADMIN_LOGIN = "ADMIN_LOGIN";
 export const ADD_STUDENT = "ADD_STUDENT";
 export const SUBMIT_RESULT = "SUBMIT_RESULT";
-
-// STUDENT
-export const LOGIN = "LOGIN";
