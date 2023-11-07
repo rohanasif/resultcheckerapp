@@ -4,8 +4,8 @@
   },
   "students": [
     {
-      "name": "er",
-      "rollNo": "1",
+      "name": "rohan",
+      "rollNo": "1234",
       "id": 1,
       "marks": {
         "English": "1",
@@ -14,32 +14,8 @@
         "Physics": "1",
         "Chemistry": "1",
         "Islamiat": "1",
-        "Pak Studies": "1"
+        "Pak Studies": ""
       }
-    },
-    {
-      "name": "Rohan",
-      "rollNo": "1234",
-      "id": 2,
-      "marks": {
-        "English": "2",
-        "Mathematics": "1",
-        "Urdu": "1",
-        "Physics": "2",
-        "Chemistry": "12",
-        "Islamiat": "12",
-        "Pak Studies": "2"
-      }
-    },
-    {
-      "name": "rohan",
-      "rollNo": "1234",
-      "id": 3
-    },
-    {
-      "name": "rohan",
-      "rollNo": "1234",
-      "id": 4
     }
   ]
 }

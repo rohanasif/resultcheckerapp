@@ -70,6 +70,19 @@ export const addStudent = (student) => async (dispatch) => {
   }
 };
 
+export const updateStudent = (rollNo, marks) => async (dispatch) => {
+  try {
+    const selectedStudent = await dispatch(selectStudent(rollNo));
+    const response = await axios.patch(
+      `${STUDENTS_URL}/${selectedStudent.id}`,
+      marks
+    );
+    const updated = response.data;
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 export const submitResult = (rollNo, marks) => async (dispatch) => {
   try {
     const student = await dispatch(selectStudent(rollNo));

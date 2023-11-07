@@ -1,8 +1,10 @@
+// AddStudent.js
 import { Form, Button } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { addStudent, getStudents, selectStudent } from "../actions";
+import { addStudent, getStudents } from "../actions";
 import { useNavigate } from "react-router-dom";
+
 const AddStudent = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -12,16 +14,18 @@ const AddStudent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const students = await dispatch(getStudents());
-    console.log(students);
-    const isRegistered = students.find((student) => rollNo === student.rollNo);
+    const isRegistered = students.find(
+      (student) => rollNo === student.rollNo && name === student.name
+    );
+
     if (isRegistered) {
-      const student = await dispatch(selectStudent(rollNo));
-      const marks = student.marks;
+      navigate(`/submit/${isRegistered.rollNo}`);
     } else {
       dispatch(addStudent({ name, rollNo }));
+      navigate(`/submit/${rollNo}`);
     }
-    navigate(`/submit/${rollNo}`);
   };
+
   return (
     <div>
       <h1>Enter Student Details</h1>
